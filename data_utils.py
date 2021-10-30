@@ -1036,17 +1036,18 @@ def getCriteoAdData(
                     for j in range(26):
                         convertDicts[j][X_cat[i][j]] = 1
                     # debug prints
-                    print(
-                        "Load %d/%d  Split: %d  Label True: %d  Stored: %d"
-                        % (
-                            i,
-                            num_data_in_split,
-                            split,
-                            target,
-                            y[i],
-                        ),
-                        end="\r",
-                    )
+                    if i % int(num_data_in_split/10) == 0:
+                        print(
+                            "Load %d/%d  Split: %d  Label True: %d  Stored: %d"
+                            % (
+                                i,
+                                num_data_in_split,
+                                split,
+                                target,
+                                y[i],
+                            ),
+                            end="\r",
+                        )
                 i += 1
 
             # store num_data_in_split samples or extras at the end of file
