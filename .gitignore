@@ -1,3 +1,13 @@
+# Dateset
+input/fake_criteo/
+input/kaggle/
+
+# Tensorboard
+run_kaggle_pt/
+
+# hostfile
+*.hosts
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
